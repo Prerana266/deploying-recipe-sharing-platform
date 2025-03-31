@@ -312,75 +312,7 @@ section{
 
 
 
-/* ==================== RESPONSIVE IMPROVEMENTS ==================== */
-/* Mobile: 0px - 768px */
-@media (max-width: 768px) {
-  /* Header/Navbar */
-  header {
-    flex-direction: column;
-    padding: 0.5rem;
-  }
-  header ul {
-    width: 100%;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem 0;
-  }
-  header h2 {
-    margin: 0.5rem 0;
-    align-self: flex-start;
-  }
 
-  /* Home Section */
-  .home {
-    flex-direction: column;
-    gap: 2rem;
-    margin-top: 4rem;
-  }
-  .home .left h1 {
-    font-size: 2rem;
-    width: 100%;
-  }
-
-  /* Recipe Cards */
-  .card-container {
-    grid-template-columns: 1fr;
-    width: 95%;
-  }
-
-  /* Forms */
-  .modal {
-    width: 90%;
-    left: 5%;
-    top: 20%;
-  }
-  .form-control {
-    flex-direction: column;
-  }
-  .form-control .input,
-  .form-control .input-textarea {
-    width: 100% !important;
-  }
-
-  /* Footer */
-  .footer {
-    position: relative;
-    margin-top: 2rem;
-  }
-}
-
-/* Tablet: 769px - 1024px */
-@media (min-width: 769px) and (max-width: 1024px) {
-  header ul {
-    width: 60%;
-  }
-  .home .left h1 {
-    font-size: 2.5rem;
-  }
-  .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
 
 /* ==================== UX ENHANCEMENTS ==================== */
 /* Buttons */
