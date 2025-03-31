@@ -64,8 +64,12 @@ section{
   position: relative;
 }
 
+.below {
+  margin-bottom: 10px;
+}
+
 .home .left h1{
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
   color: #1a3e3e;
   width: 580px;
   padding-left: 3px;
