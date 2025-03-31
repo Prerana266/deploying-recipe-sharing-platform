@@ -306,60 +306,160 @@ section{
 
 
 
-/* Media Queries for Mobile & Tablet Responsiveness */
-@media (max-width: 768px) {
+/* =============== RESPONSIVE MEDIA QUERIES =============== */
+/* Mobile: 320px - 767px */
+@media (max-width: 767px) {
+  /* Header adjustments */
   header ul {
-    width: 70%;
+    width: 60%;
+    height: auto;
+    padding: 0.5rem 0;
   }
 
+  header h2 {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+
+  /* Home section */
   .home {
     flex-direction: column;
     gap: 2rem;
+    margin-top: 4rem;
   }
 
   .home .left h1 {
-    font-size: 40px;
     width: 100%;
+    font-size: 2.2rem;
+    line-height: 1.2;
   }
 
-  .home button {
-    width: 100%;
+  .home .left h4 {
+    font-size: 1rem;
   }
 
+  /* Recipe cards */
   .card-container {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    gap: 1.5rem;
+    width: 95%;
+  }
+
+  /* Modal forms */
+  .modal {
+    width: 90%;
+    left: 5%;
+    top: 25%;
+    padding: 1rem;
+  }
+
+  .form {
+    width: 90%;
+  }
+
+  .form-control {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-control .input,
+  .form-control .input-textarea {
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  /* Outer containers */
+  .outer-container {
+    width: 90%;
   }
 
   .outer-container .recipe-details {
     flex-direction: column;
-  }
-
-  .modal {
-    width: 80%;
-    left: 10%;
-    top: 25%;
-  }
-
-  .footer {
-    font-size: 12px;
+    gap: 1rem;
   }
 }
 
-@media (max-width: 480px) {
+/* Tablet: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* Header */
   header ul {
-    width: 80%;
+    width: 50%;
+  }
+
+  /* Home section */
+  .home {
+    gap: 4rem;
   }
 
   .home .left h1 {
-    font-size: 35px;
-    text-align: center;
+    width: 100%;
+    font-size: 2.8rem;
   }
 
-  .home .left h4 {
-    font-size: 14px;
+  /* Recipe cards */
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    width: 90%;
   }
 
-  .footer {
-    font-size: 10px;
+  /* Modal */
+  .modal {
+    width: 70%;
+    left: 15%;
+  }
+
+  .form {
+    width: 80%;
+  }
+}
+
+/* Small Desktop: 1024px - 1279px */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .home {
+    gap: 6rem;
+  }
+
+  .home .left h1 {
+    font-size: 3.2rem;
+    width: 80%;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
+
+/* Large Desktop: 1280px and above */
+@media (min-width: 1280px) {
+  /* Keep your original styles with minor tweaks */
+  .home .left h1 {
+    width: 90%;
+  }
+}
+
+/* Special cases for very small mobile devices */
+@media (max-width: 400px) {
+  header ul {
+    width: 70%;
+  }
+
+  header ul li a {
+    font-size: 0.8rem;
+    padding: 2px 5px;
+  }
+
+  .home button {
+    width: 150px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .home {
+    margin-top: 3rem;
+  }
+  
+  .modal {
+    top: 15%;
   }
 }
