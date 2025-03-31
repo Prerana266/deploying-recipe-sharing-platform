@@ -126,7 +126,7 @@ section{
 .card-body .title{
   margin-bottom:5px;
   font-size: 15px;
-  font-weight:500;
+  font-weight:bold;
 }
 
 .card-body .icons{
