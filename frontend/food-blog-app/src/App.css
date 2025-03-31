@@ -64,6 +64,9 @@ section{
   position: relative;
 }
 
+.below {
+  height:60px;
+}
 
 
 .home .left h1{
