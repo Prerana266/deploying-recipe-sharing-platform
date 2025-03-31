@@ -298,4 +298,68 @@ section{
 .active{
   color:black !important;
   background-color: #d4f6e8;
-} 
+}
+
+
+
+
+
+
+
+/* Media Queries for Mobile & Tablet Responsiveness */
+@media (max-width: 768px) {
+  header ul {
+    width: 70%;
+  }
+
+  .home {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .home .left h1 {
+    font-size: 40px;
+    width: 100%;
+  }
+
+  .home button {
+    width: 100%;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .outer-container .recipe-details {
+    flex-direction: column;
+  }
+
+  .modal {
+    width: 80%;
+    left: 10%;
+    top: 25%;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  header ul {
+    width: 80%;
+  }
+
+  .home .left h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+
+  .home .left h4 {
+    font-size: 14px;
+  }
+
+  .footer {
+    font-size: 10px;
+  }
+}
