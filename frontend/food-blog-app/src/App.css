@@ -306,6 +306,27 @@ section{
 
 
 
+/* ===== Force Uniform Title Bars ===== */
+.recipe-list h2 {
+  display: block; /* Override inline defaults */
+  width: 100%;
+  background: linear-gradient(90deg, #d4f6e8, #bce5d6);
+  padding: 0.5rem 1rem;
+  margin: 0 0 0.5rem 0; /* Reset margins */
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  clear: both; /* Prevent float collisions */
+}
+
+/* Optional: Add left-aligned decorator */
+.recipe-list h2::before {
+  content: "🍴 ";
+}
+
+
+
+
+
+
 /* ==================== RESPONSIVE IMPROVEMENTS ==================== */
 /* Mobile: 0px - 768px */
 @media (max-width: 768px) {
