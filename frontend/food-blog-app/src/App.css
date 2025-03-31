@@ -306,160 +306,138 @@ section{
 
 
 
-/* =============== RESPONSIVE MEDIA QUERIES =============== */
-/* Mobile: 320px - 767px */
-@media (max-width: 767px) {
-  /* Header adjustments */
+/* ==================== RESPONSIVE IMPROVEMENTS ==================== */
+/* Mobile: 0px - 768px */
+@media (max-width: 768px) {
+  /* Header/Navbar */
+  header {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
   header ul {
-    width: 60%;
-    height: auto;
-    padding: 0.5rem 0;
+    width: 100%;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 0;
   }
-
   header h2 {
-    font-size: 1.2rem;
-    margin-left: 0.5rem;
+    margin: 0.5rem 0;
+    align-self: flex-start;
   }
 
-  /* Home section */
+  /* Home Section */
   .home {
     flex-direction: column;
     gap: 2rem;
     margin-top: 4rem;
   }
-
   .home .left h1 {
+    font-size: 2rem;
     width: 100%;
-    font-size: 2.2rem;
-    line-height: 1.2;
   }
 
-  .home .left h4 {
-    font-size: 1rem;
-  }
-
-  /* Recipe cards */
+  /* Recipe Cards */
   .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
     width: 95%;
   }
 
-  /* Modal forms */
+  /* Forms */
   .modal {
     width: 90%;
     left: 5%;
-    top: 25%;
-    padding: 1rem;
+    top: 20%;
   }
-
-  .form {
-    width: 90%;
-  }
-
   .form-control {
     flex-direction: column;
-    gap: 0.5rem;
   }
-
   .form-control .input,
   .form-control .input-textarea {
-    flex-basis: 100%;
-    width: 100%;
+    width: 100% !important;
   }
 
-  /* Outer containers */
-  .outer-container {
-    width: 90%;
-  }
-
-  .outer-container .recipe-details {
-    flex-direction: column;
-    gap: 1rem;
+  /* Footer */
+  .footer {
+    position: relative;
+    margin-top: 2rem;
   }
 }
 
-/* Tablet: 768px - 1023px */
-@media (min-width: 768px) and (max-width: 1023px) {
-  /* Header */
+/* Tablet: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
   header ul {
-    width: 50%;
+    width: 60%;
   }
-
-  /* Home section */
-  .home {
-    gap: 4rem;
-  }
-
   .home .left h1 {
-    width: 100%;
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
-
-  /* Recipe cards */
   .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
-    width: 90%;
-  }
-
-  /* Modal */
-  .modal {
-    width: 70%;
-    left: 15%;
-  }
-
-  .form {
-    width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
-/* Small Desktop: 1024px - 1279px */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .home {
-    gap: 6rem;
-  }
-
-  .home .left h1 {
-    font-size: 3.2rem;
-    width: 80%;
-  }
-
-  .card-container {
-    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
-  }
+/* ==================== UX ENHANCEMENTS ==================== */
+/* Buttons */
+button, .home button {
+  padding: 0.75rem 1.5rem;
+  background-color: #1a3e3e;
+  transition: all 0.3s ease;
+}
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-/* Large Desktop: 1280px and above */
-@media (min-width: 1280px) {
-  /* Keep your original styles with minor tweaks */
-  .home .left h1 {
-    width: 90%;
-  }
+/* File Upload */
+input[type="file"] {
+  border: 1px dashed #1a3e3e;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
-/* Special cases for very small mobile devices */
-@media (max-width: 400px) {
-  header ul {
-    width: 70%;
-  }
+/* Recipe Cards */
+.card {
+  transition: transform 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-body .title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a3e3e;
+  margin-bottom: 0.5rem;
+}
 
+/* Footer */
+.footer {
+  padding: 1rem;
+  background-color: #1a3e3e;
+  color: white;
+  text-align: center;
+}
+
+/* Empty States */
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-style: italic;
+}
+
+/* ==================== TYPOGRAPHY TWEAKS ==================== */
+.home .left h4 {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* ==================== SAFE OVERRIDES ==================== */
+/* Add !important only where absolutely necessary */
+@media (max-width: 480px) {
   header ul li a {
-    font-size: 0.8rem;
-    padding: 2px 5px;
-  }
-
-  .home button {
-    width: 150px;
-  }
-}
-
-/* Landscape orientation adjustments */
-@media (max-height: 500px) and (orientation: landscape) {
-  .home {
-    margin-top: 3rem;
-  }
-  
-  .modal {
-    top: 15%;
+    font-size: 0.9rem !important;
+    padding: 0.25rem 0.5rem !important;
   }
 }
