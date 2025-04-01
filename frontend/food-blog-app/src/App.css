@@ -474,7 +474,34 @@ section{
     top: 15%;
   }
 }
+/* Mobile: 320px - 767px */
+@media (max-width: 767px) {
+  /* ... (keep your existing mobile styles) ... */
 
+  /* Add image responsiveness */
+  .home .right img {
+    width: 250px;  /* Reduced from 320px */
+    height: auto;  /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent overflow */
+  }
+
+  /* Optional: Adjust home section layout */
+  .home .right {
+    order: -1; /* Move image above text if needed */
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* ... (keep your existing tablet styles) ... */
+
+  /* Adjust image size for tablets */
+  .home .right img {
+    width: 280px;
+    height: auto;
+  }
+}
 
 
 
