@@ -474,46 +474,91 @@ section{
     top: 15%;
   }
 }
+
+
+
+
+
+
 /* Mobile: 320px - 767px */
 @media (max-width: 767px) {
-  /* ... (keep your existing mobile styles) ... */
-
-  /* Add image responsiveness */
-  .home .right img {
-    width: 250px;  /* Reduced from 320px */
-    height: auto;  /* Maintain aspect ratio */
-    max-width: 100%; /* Prevent overflow */
+  /* Header adjustments (keep existing) */
+  header ul {
+    width: 60%;
+    height: auto;
+    padding: 0.5rem 0;
   }
 
-  /* Optional: Adjust home section layout */
+  header h2 {
+    font-size: 1.2rem;
+    margin-left: 0.5rem;
+  }
+
+  /* Home section - NEW LAYOUT */
+  .home {
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+
+  /* Image responsiveness - UPDATED */
+  .home .right img {
+    width: 100%;
+    max-width: 280px; /* Slightly larger than 250px for better visibility */
+    height: auto;
+    margin: 0 auto; /* Center image */
+    display: block;
+  }
+
+  /* Text container adjustments */
+  .home .left h1 {
+    width: 100%;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    text-align: center; /* Optional: Center align for mobile */
+  }
+
+  .home .left h4 {
+    font-size: 1rem;
+    text-align: center; /* Optional */
+  }
+
+  /* Remove order:-1 since we want image BELOW text */
   .home .right {
-    order: -1; /* Move image above text if needed */
-    margin-bottom: 1rem;
+    margin-top: 1rem;
+    order: 1; /* Explicitly set image to appear after text */
   }
 }
 
 /* Tablet: 768px - 1023px */
 @media (min-width: 768px) and (max-width: 1023px) {
-  /* ... (keep your existing tablet styles) ... */
+  /* Header (keep existing) */
+  header ul {
+    width: 50%;
+  }
 
-  /* Adjust image size for tablets */
+  /* Home section adjustments */
+  .home {
+    gap: 3rem; /* Reduced from 4rem for better proportions */
+  }
+
+  /* Image scaling - UPDATED */
   .home .right img {
-    width: 280px;
+    width: 100%;
+    max-width: 300px; /* Between mobile and desktop size */
     height: auto;
+  }
+
+  /* Text adjustments */
+  .home .left h1 {
+    width: 100%;
+    font-size: 2.5rem; /* Slightly smaller than desktop */
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* NEW: Very small mobile enhancement */
+@media (max-width: 400px) {
+  .home .right img {
+    max-width: 250px; /* Smaller for tiny screens */
+  }
+}
